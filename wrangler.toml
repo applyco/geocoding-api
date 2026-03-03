@@ -15,3 +15,5 @@ DEFAULT_LANG = "es"
 # wrangler secret put ES_URL --env production
 # wrangler secret put ES_USERNAME --env production
 # wrangler secret put ES_PASSWORD --env production
+
+#actualizacion 1
