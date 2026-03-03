@@ -1,0 +1,431 @@
+openapi: 3.0.3
+info:
+  title: Geocoding API
+  version: 1.0.0
+  description: |
+    Reverse geocoding API built on Cloudflare Workers & Elasticsearch.
+
+    Given coordinates (latitude, longitude), returns a hierarchical place name breadcrumb
+    in Spanish, English, or Portuguese.
+
+    **No authentication required.** API is publicly accessible with CORS enabled.
+  contact:
+    name: API Support
+    url: https://github.com/yourusername/geocoding-api
+  license:
+    name: Data Attribution
+    url: https://www.naturalearthdata.com/
+
+servers:
+  - url: https://geocoding-api-production.tortugo-raw.workers.dev
+    description: Production
+
+paths:
+  /:
+    get:
+      summary: API Info
+      description: Returns API metadata and available endpoints
+      operationId: getInfo
+      tags:
+        - Info
+      responses:
+        '200':
+          description: API metadata
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiInfo'
+
+  /health:
+    get:
+      summary: Health Check
+      description: Checks Elasticsearch cluster health status
+      operationId: getHealth
+      tags:
+        - Health
+      responses:
+        '200':
+          description: Cluster is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+        '503':
+          description: Cluster is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthError'
+
+  /reverse:
+    get:
+      summary: Reverse Geocode
+      description: |
+        Returns the geographic hierarchy (continent > zone > country > admin1 > city)
+        for the given coordinates.
+      operationId: reverseGeocode
+      tags:
+        - Geocoding
+      parameters:
+        - name: lat
+          in: query
+          description: Latitude (-90 to 90)
+          required: true
+          schema:
+            type: number
+            format: double
+            minimum: -90
+            maximum: 90
+          example: -43.9
+        - name: lon
+          in: query
+          description: Longitude (-180 to 180)
+          required: true
+          schema:
+            type: number
+            format: double
+            minimum: -180
+            maximum: 180
+          example: 171.5
+        - name: lang
+          in: query
+          description: Language code for place names
+          required: false
+          schema:
+            type: string
+            enum: [es, en, pt]
+            default: es
+          example: es
+      responses:
+        '200':
+          description: Successful reverse geocoding
+          headers:
+            Cache-Control:
+              schema:
+                type: string
+              description: Cache policy (1 week immutable)
+              example: 'public, max-age=604800, immutable'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReverseGeocodeResult'
+              examples:
+                spanish:
+                  summary: Spanish example (Ashburton, New Zealand)
+                  value:
+                    breadcrumb: "Oceanía > Australia y Nueva Zelanda > Nueva Zelanda > Canterbury > Ashburton"
+                    parts:
+                      continent: "Oceanía"
+                      zone: "Australia y Nueva Zelanda"
+                      country: "Nueva Zelanda"
+                      admin1: "Canterbury"
+                      city: "Ashburton"
+                    lang: "es"
+                    coordinates:
+                      lat: -43.9
+                      lon: 171.5
+                english:
+                  summary: English example (Ashburton, New Zealand)
+                  value:
+                    breadcrumb: "Oceania > Australia and New Zealand > New Zealand > Canterbury > Ashburton"
+                    parts:
+                      continent: "Oceania"
+                      zone: "Australia and New Zealand"
+                      country: "New Zealand"
+                      admin1: "Canterbury"
+                      city: "Ashburton"
+                    lang: "en"
+                    coordinates:
+                      lat: -43.9
+                      lon: 171.5
+                portuguese:
+                  summary: Portuguese example (Ashburton, New Zealand)
+                  value:
+                    breadcrumb: "Oceania > Austrália e Nova Zelândia > Nova Zelândia > Canterbury > Ashburton"
+                    parts:
+                      continent: "Oceania"
+                      zone: "Austrália e Nova Zelândia"
+                      country: "Nova Zelândia"
+                      admin1: "Canterbury"
+                      city: "Ashburton"
+                    lang: "pt"
+                    coordinates:
+                      lat: -43.9
+                      lon: 171.5
+
+        '400':
+          description: Invalid query parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+              example:
+                error: "Invalid query parameters"
+                details:
+                  - field: "lat"
+                    message: "Latitude must be between -90 and 90"
+                  - field: "lang"
+                    message: "Invalid enum value. Expected 'es' | 'en' | 'pt', received 'fr'"
+
+        '404':
+          description: No geographic feature found for coordinates (e.g., in international waters)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundError'
+              example:
+                error: "No geographic feature found for these coordinates"
+                coordinates:
+                  lat: 0
+                  lon: 0
+
+        '500':
+          description: Internal server error (Elasticsearch unavailable or other error)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerError'
+              example:
+                error: "Geocoding service error"
+                message: "Elasticsearch _msearch failed: 503 Service Unavailable"
+
+components:
+  schemas:
+    ApiInfo:
+      type: object
+      description: API metadata and available endpoints
+      required:
+        - name
+        - version
+        - description
+        - endpoints
+        - examples
+      properties:
+        name:
+          type: string
+          example: "Geocoding API"
+        version:
+          type: string
+          example: "1.0.0"
+        description:
+          type: string
+          example: "Reverse geocoding with hierarchical place names"
+        endpoints:
+          type: object
+          required:
+            - reverse
+            - health
+          properties:
+            root:
+              type: string
+              example: "/"
+            health:
+              type: string
+              example: "/health"
+            reverse:
+              type: string
+              example: "/reverse?lat=X&lon=Y&lang=es|en|pt"
+        examples:
+          type: array
+          items:
+            type: object
+            required:
+              - url
+              - name
+            properties:
+              url:
+                type: string
+              name:
+                type: string
+
+    ReverseGeocodeResult:
+      type: object
+      description: Successful reverse geocoding response
+      required:
+        - breadcrumb
+        - parts
+        - lang
+        - coordinates
+      properties:
+        breadcrumb:
+          type: string
+          description: Hierarchical place name (continent > zone > country > admin1 > city)
+          example: "Oceanía > Australia y Nueva Zelanda > Nueva Zelanda > Canterbury > Ashburton"
+        parts:
+          type: object
+          description: Individual geographic hierarchy components
+          properties:
+            continent:
+              type: string
+              description: Continent name (6 total)
+              example: "Oceanía"
+            zone:
+              type: string
+              description: UN M.49 subregion or geographic zone (~22 total)
+              example: "Australia y Nueva Zelanda"
+            country:
+              type: string
+              description: Country name (~250 total)
+              example: "Nueva Zelanda"
+            admin1:
+              type: string
+              description: State, province, or region (~3,500 total)
+              example: "Canterbury"
+            city:
+              type: string
+              description: City or populated place (~80,000 total, pop >= 5,000)
+              example: "Ashburton"
+        lang:
+          type: string
+          enum: [es, en, pt]
+          description: Language of returned place names
+          example: "es"
+        coordinates:
+          type: object
+          description: Input coordinates
+          required:
+            - lat
+            - lon
+          properties:
+            lat:
+              type: number
+              format: double
+              example: -43.9
+            lon:
+              type: number
+              format: double
+              example: 171.5
+
+    HealthResponse:
+      type: object
+      description: Cluster is healthy
+      required:
+        - status
+        - elasticsearch
+      properties:
+        status:
+          type: string
+          enum: [ok]
+          example: "ok"
+        elasticsearch:
+          type: object
+          required:
+            - cluster
+            - status
+            - nodes
+            - indices
+          properties:
+            cluster:
+              type: string
+              description: Cluster name
+              example: "docker-cluster"
+            status:
+              type: string
+              enum: [green, yellow, red]
+              description: Cluster health status
+              example: "yellow"
+            nodes:
+              type: integer
+              description: Number of nodes in cluster
+              example: 1
+            indices:
+              type: integer
+              description: Number of indices in cluster
+              example: 8
+
+    HealthError:
+      type: object
+      description: Cluster is unavailable
+      required:
+        - status
+        - elasticsearch
+      properties:
+        status:
+          type: string
+          enum: [error]
+          example: "error"
+        elasticsearch:
+          type: string
+          description: Error message from Elasticsearch
+          example: "HTTP 503 Service Unavailable"
+
+    ValidationError:
+      type: object
+      description: Query parameter validation error
+      required:
+        - error
+        - details
+      properties:
+        error:
+          type: string
+          example: "Invalid query parameters"
+        details:
+          type: array
+          items:
+            type: object
+            required:
+              - field
+              - message
+            properties:
+              field:
+                type: string
+                example: "lat"
+              message:
+                type: string
+                example: "Latitude must be between -90 and 90"
+
+    NotFoundError:
+      type: object
+      description: Coordinates not in any geographic feature
+      required:
+        - error
+        - coordinates
+      properties:
+        error:
+          type: string
+          example: "No geographic feature found for these coordinates"
+        coordinates:
+          type: object
+          required:
+            - lat
+            - lon
+          properties:
+            lat:
+              type: number
+              format: double
+            lon:
+              type: number
+              format: double
+
+    ServerError:
+      type: object
+      description: Internal server error
+      required:
+        - error
+        - message
+      properties:
+        error:
+          type: string
+          example: "Geocoding service error"
+        message:
+          type: string
+          description: Error details
+          example: "Elasticsearch _msearch failed: 503 Service Unavailable"
+
+  securitySchemes:
+    # This API requires no authentication
+    noauth:
+      type: http
+      scheme: bearer
+      description: No authentication required
+
+security:
+  - noauth: []
+
+tags:
+  - name: Info
+    description: API metadata endpoints
+  - name: Health
+    description: Health check endpoints
+  - name: Geocoding
+    description: Reverse geocoding endpoints

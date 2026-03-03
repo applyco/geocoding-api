@@ -10,12 +10,15 @@
     "step:overrides": "tsx src/steps/04_apply_overrides.ts",
     "step:validate": "tsx src/steps/05_validate.ts",
     "step:index": "tsx src/steps/06_index.ts",
+    "step:update-names": "tsx src/steps/99_update_names.ts",
+    "step:index-overrides": "tsx src/steps/07_index_with_overrides.ts",
     "etl": "tsx src/pipeline.ts"
   },
   "dependencies": {
     "@elastic/elasticsearch": "^8.17.0",
     "@turf/turf": "^7.1.0",
     "decompress": "^4.2.1",
+    "geocoding-etl": "file:",
     "js-yaml": "^4.1.0",
     "node-fetch": "^3.3.2",
     "ogr2ogr": "^5.0.0",
