@@ -1,0 +1,30 @@
+{
+  "name": "geocoding-etl",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ETL pipeline for geocoding data",
+  "scripts": {
+    "step:download": "tsx src/steps/01_download.ts",
+    "step:convert": "tsx src/steps/02_convert.ts",
+    "step:zones": "tsx src/steps/03_build_zones.ts",
+    "step:overrides": "tsx src/steps/04_apply_overrides.ts",
+    "step:validate": "tsx src/steps/05_validate.ts",
+    "step:index": "tsx src/steps/06_index.ts",
+    "etl": "tsx src/pipeline.ts"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.17.0",
+    "@turf/turf": "^7.1.0",
+    "decompress": "^4.2.1",
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^3.3.2",
+    "ogr2ogr": "^5.0.0",
+    "shapefile": "^0.6.6"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

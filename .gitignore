@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+dist/
+.env
+.env.*.local
+
+# ETL data
+etl/data/raw/
+etl/data/processed/
+etl/.wrangler/
+
+# Build outputs
+worker/.wrangler/
+worker/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (never commit)
+*.key
+*.pem
+*.cert
+.env
+.env.local

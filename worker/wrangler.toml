@@ -1,0 +1,28 @@
+name = "geocoding-api"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ES_INDEX_PREFIX = "geo_"
+DEFAULT_LANG = "es"
+
+# For local development, set these variables:
+# ES_URL = "http://elasticsearch-url"
+# ES_USERNAME = "elastic"
+# ES_PASSWORD = "password"
+
+[env.production.vars]
+ES_INDEX_PREFIX = "geo_"
+DEFAULT_LANG = "es"
+
+# To set secrets for production, use either:
+#
+# Option 1: API Key (recommended for production)
+# wrangler secret put ES_URL --env production
+# wrangler secret put ES_API_KEY --env production
+#
+# Option 2: Basic Auth (username + password)
+# wrangler secret put ES_URL --env production
+# wrangler secret put ES_USERNAME --env production
+# wrangler secret put ES_PASSWORD --env production

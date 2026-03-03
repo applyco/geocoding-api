@@ -1,0 +1,176 @@
+# Canonical Names Overrides
+# This is the SINGLE SOURCE OF TRUTH for all geographic names
+# When data is re-downloaded/reprocessed, these overrides are applied on top
+# to ensure consistent naming across providers
+
+continents:
+  # No overrides needed at continent level
+
+countries:
+  NZL:
+    names:
+      es: "Nueva Zelanda"
+      en: "New Zealand"
+      pt: "Nova Zelândia"
+    canonical: "New Zealand"
+
+  USA:
+    names:
+      es: "Estados Unidos de América"
+      en: "United States of America"
+      pt: "Estados Unidos da América"
+    canonical: "United States of America"
+
+  BRA:
+    names:
+      es: "Brasil"
+      en: "Brazil"
+      pt: "Brasil"
+    canonical: "Brazil"
+
+zones:
+  # UN M.49 Subregion 053: Australia and New Zealand
+  "m49-053":
+    names:
+      es: "Australia y Nueva Zelanda"
+      en: "Australia and New Zealand"
+      pt: "Austrália e Nova Zelândia"
+    canonical: "Australia and New Zealand"
+
+  # UN M.49 Subregion 005: South America
+  "m49-005":
+    names:
+      es: "América del Sur"
+      en: "South America"
+      pt: "América do Sul"
+    canonical: "South America"
+
+  # UN M.49 Subregion 021: Northern America
+  "m49-021":
+    names:
+      es: "América Septentrional"
+      en: "Northern America"
+      pt: "América do Norte"
+    canonical: "Northern America"
+
+  # US Census Division: Mountain
+  "us-census-mountain":
+    names:
+      es: "Región Montañosa"
+      en: "Mountain Division"
+      pt: "Divisão das Montanhas"
+    canonical: "Mountain Division"
+
+  # US Census Division: Pacific
+  "us-census-pacific":
+    names:
+      es: "Región del Pacífico"
+      en: "Pacific Division"
+      pt: "Divisão do Pacífico"
+    canonical: "Pacific Division"
+
+  # US Census Division: New England
+  "us-census-newengland":
+    names:
+      es: "Nueva Inglaterra"
+      en: "New England Division"
+      pt: "Nova Inglaterra"
+    canonical: "New England Division"
+
+  # US Census Division: Middle Atlantic
+  "us-census-middleatlantic":
+    names:
+      es: "Atlántico Medio"
+      en: "Middle Atlantic Division"
+      pt: "Atlântico Médio"
+    canonical: "Middle Atlantic Division"
+
+  # US Census Division: East North Central
+  "us-census-eastnorthcentral":
+    names:
+      es: "Centro-Norte del Este"
+      en: "East North Central Division"
+      pt: "Centro-Norte do Leste"
+    canonical: "East North Central Division"
+
+  # US Census Division: West North Central
+  "us-census-westnorthcentral":
+    names:
+      es: "Centro-Norte del Oeste"
+      en: "West North Central Division"
+      pt: "Centro-Norte do Oeste"
+    canonical: "West North Central Division"
+
+  # US Census Division: South Atlantic
+  "us-census-southatlantic":
+    names:
+      es: "Atlántico Sur"
+      en: "South Atlantic Division"
+      pt: "Atlântico Sul"
+    canonical: "South Atlantic Division"
+
+  # US Census Division: East South Central
+  "us-census-eastsouthcentral":
+    names:
+      es: "Centro-Sur del Este"
+      en: "East South Central Division"
+      pt: "Centro-Sul do Leste"
+    canonical: "East South Central Division"
+
+  # US Census Division: West South Central
+  "us-census-westsouthcentral":
+    names:
+      es: "Centro-Sur del Oeste"
+      en: "West South Central Division"
+      pt: "Centro-Sul do Oeste"
+    canonical: "West South Central Division"
+
+admin1:
+  # New Zealand: Canterbury
+  "NZ-CAN":
+    names:
+      es: "Canterbury"
+      en: "Canterbury"
+      pt: "Canterbury"
+    canonical: "Canterbury"
+
+  # USA: Arizona
+  "US-AZ":
+    names:
+      es: "Arizona"
+      en: "Arizona"
+      pt: "Arizona"
+    canonical: "Arizona"
+
+  # Brazil: Minas Gerais
+  "BR-MG":
+    names:
+      es: "Minas Gerais"
+      en: "Minas Gerais"
+      pt: "Minas Gerais"
+    canonical: "Minas Gerais"
+
+cities:
+  # Canterbury, NZ - GeoNames ID 2179542
+  "2179542":
+    names:
+      es: "Ashburton"
+      en: "Ashburton"
+      pt: "Ashburton"
+    canonical: "Ashburton"
+
+  # Page, Arizona - GeoNames ID 2805344
+  "2805344":
+    names:
+      es: "Page"
+      en: "Page"
+      pt: "Page"
+    canonical: "Page"
+
+  # Ibitirama, Brazil - GeoNames ID 3469034
+  "3469034":
+    names:
+      es: "Ibitirama"
+      en: "Ibitirama"
+      pt: "Ibitirama"
+    canonical: "Ibitirama"

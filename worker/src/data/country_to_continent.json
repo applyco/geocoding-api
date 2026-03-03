@@ -1,0 +1,1277 @@
+{
+  "IDN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "MYS": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "CHL": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "BOL": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "PER": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "ARG": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "GB1": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "CYP": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "IND": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "CHN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "ISR": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "PSE": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "LBN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "ETH": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "SSD": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "SOM": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "KEN": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "MWI": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "TZA": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "SYR": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "SOL": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "FRA": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "SUR": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "GUY": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "KOR": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "PRK": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "MAR": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "ESH": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "CRI": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "NIC": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "COG": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "COD": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "BTN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "UKR": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "BLR": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "NAM": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "ZAF": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "MAF": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "SXM": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "OMN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "UZB": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "KAZ": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "TJK": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "LTU": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "BRA": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "URY": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "MNG": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "RUS": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "CZE": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "DEU": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "EST": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "LVA": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "NOR": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "SWE": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "FIN": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "VNM": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "KHM": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "LUX": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "ARE": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "BEL": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "GEO": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "MKD": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "ALB": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "AZE": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "KOS": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "TUR": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "ESP": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "LAO": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "KGZ": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "ARM": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "DNK": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "LBY": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "TUN": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "ROU": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "HUN": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "SVK": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "POL": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "IRL": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "GBR": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "GRC": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "ZMB": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "SLE": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "GIN": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "LBR": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "CAF": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "SDN": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "DJI": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "ERI": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "AUT": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "IRQ": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "ITA": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "CHE": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "IRN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "NLD": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "LIE": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "CIV": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "SRB": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "MLI": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "SEN": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "NGA": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "BEN": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "AGO": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "HRV": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "SVN": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "QAT": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "SAU": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "BWA": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "ZWE": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "PAK": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "BGR": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "THA": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "SMR": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "HTI": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "DOM": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "TCD": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "KWT": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "SLV": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "GTM": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "TLS": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "BRN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "MCO": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "DZA": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "MOZ": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "SWZ": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "BDI": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "RWA": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "MMR": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "BGD": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "AND": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "AFG": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "MNE": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "BIH": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "UGA": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "CU1": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "CUB": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "HND": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "ECU": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "COL": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "PRY": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "BRI": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "PRT": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "MDA": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "TKM": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "JOR": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "NPL": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "LSO": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "CMR": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "GAB": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "NER": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "BFA": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "TGO": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "GHA": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "GNB": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "GIB": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "USA": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "CAN": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "MEX": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "BLZ": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "PAN": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "VEN": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "PNG": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "EGY": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "YEM": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "MRT": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "GNQ": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "GMB": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "HKG": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "VAT": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "CYN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "CNM": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "KAS": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "KA1": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "SPI": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "BRT": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "ATA": {
+    "es": "Antártida",
+    "en": "Antarctica",
+    "pt": "Antártica"
+  },
+  "AUS": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "GRL": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "FJI": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "NZL": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "NCL": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "MDG": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "PHL": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "LKA": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "CUW": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "ABW": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "BHS": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "TCA": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "TWN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "JPN": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "SPM": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "ISL": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "PCN": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "PYF": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "ATF": {
+    "es": "Alta Mar",
+    "en": "Open Ocean",
+    "pt": "Alto Mar"
+  },
+  "SYC": {
+    "es": "Alta Mar",
+    "en": "Open Ocean",
+    "pt": "Alto Mar"
+  },
+  "KIR": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "MHL": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "TTO": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "GRD": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "VCT": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "BRB": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "LCA": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "DMA": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "UMI": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "MSR": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "ATG": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "KNA": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "VIR": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "BLM": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "PRI": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "AIA": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "VGB": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "JAM": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "CYM": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "BMU": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "HMD": {
+    "es": "Alta Mar",
+    "en": "Open Ocean",
+    "pt": "Alto Mar"
+  },
+  "SHN": {
+    "es": "Alta Mar",
+    "en": "Open Ocean",
+    "pt": "Alto Mar"
+  },
+  "MUS": {
+    "es": "Alta Mar",
+    "en": "Open Ocean",
+    "pt": "Alto Mar"
+  },
+  "COM": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "STP": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "CPV": {
+    "es": "África",
+    "en": "Africa",
+    "pt": "África"
+  },
+  "MLT": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "JEY": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "GGY": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "IMN": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "ALA": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "FRO": {
+    "es": "Europa",
+    "en": "Europe",
+    "pt": "Europa"
+  },
+  "AU1": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "IOT": {
+    "es": "Alta Mar",
+    "en": "Open Ocean",
+    "pt": "Alto Mar"
+  },
+  "SGP": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "NFK": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "COK": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "TON": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "WLF": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "WSM": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "SLB": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "TUV": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "MDV": {
+    "es": "Alta Mar",
+    "en": "Open Ocean",
+    "pt": "Alto Mar"
+  },
+  "NRU": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "FSM": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "SGS": {
+    "es": "Alta Mar",
+    "en": "Open Ocean",
+    "pt": "Alto Mar"
+  },
+  "FLK": {
+    "es": "América del Sur",
+    "en": "South America",
+    "pt": "América do Sul"
+  },
+  "VUT": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "NIU": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "ASM": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "PLW": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "GUM": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "MNP": {
+    "es": "Oceanía",
+    "en": "Oceania",
+    "pt": "Oceania"
+  },
+  "BHR": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "PGA": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "FR1": {
+    "es": "Alta Mar",
+    "en": "Open Ocean",
+    "pt": "Alto Mar"
+  },
+  "MAC": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  },
+  "BJN": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "SER": {
+    "es": "América del Norte",
+    "en": "North America",
+    "pt": "América do Norte"
+  },
+  "SCR": {
+    "es": "Asia",
+    "en": "Asia",
+    "pt": "Ásia"
+  }
+}
