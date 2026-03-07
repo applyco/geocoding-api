@@ -86,11 +86,11 @@ function buildPointInPolygonQuery(lat: number, lon: number) {
 /**
  * Build geo_distance query for cities (nearest N km)
  */
-function buildGeoDistanceQuery(lat: number, lon: number) {
+function buildGeoDistanceQuery(lat: number, lon: number, distance: string = "10km") {
   return {
     query: {
       geo_distance: {
-        distance: "25km",
+        distance,
         centroid: {
           lat,
           lon,
@@ -256,6 +256,48 @@ export async function queryCountryByCode(
     return null;
   } catch (err) {
     console.warn(`Error querying country by code ${countryCode}:`, err);
+    return null;
+  }
+}
+
+/**
+ * Fallback city query with custom distance
+ * Used when initial query with 10km returns no city
+ */
+export async function queryCityFallback(env: Env, lat: number, lon: number, distance: string = "25km"): Promise<GeoFeature | null> {
+  const esUrl = env.ES_URL;
+  const prefix = env.ES_INDEX_PREFIX || "geo_";
+
+  if (!esUrl) {
+    throw new Error("Elasticsearch configuration missing (ES_URL)");
+  }
+
+  try {
+    const authHeader = buildAuthHeader(env);
+    const query = buildGeoDistanceQuery(lat, lon, distance);
+
+    const response = await fetch(`${esUrl}/${prefix}cities/_search`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: authHeader,
+      },
+      body: JSON.stringify(query),
+    });
+
+    if (!response.ok) {
+      console.warn(`City fallback query failed: ${response.status}`);
+      return null;
+    }
+
+    const data = (await response.json()) as any;
+    if (data.hits?.hits?.[0]) {
+      return data.hits.hits[0]._source as GeoFeature;
+    }
+
+    return null;
+  } catch (err) {
+    console.warn(`Error querying city fallback (${distance}):`, err);
     return null;
   }
 }

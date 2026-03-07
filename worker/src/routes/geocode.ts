@@ -6,7 +6,7 @@
 import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
-import { queryAllLevels, queryCountryByCode } from "../services/elasticsearch";
+import { queryAllLevels, queryCountryByCode, queryCityFallback } from "../services/elasticsearch";
 import { assembleBreadcrumb } from "../utils/breadcrumb";
 import type { Env, GeoFeature } from "../types";
 
@@ -46,8 +46,22 @@ geocodeRouter.get("/reverse", zValidator("query", querySchema), async (c) => {
       );
     }
 
-    // Fallback: if city found but no country, use city's country_code to look up country
-    const cityFeature = features.find((f) => f.level === "city");
+    // Fallback 1: if no city found with 10km, try with 25km
+    let cityFeature = features.find((f) => f.level === "city");
+    if (!cityFeature) {
+      try {
+        const fallbackCity = await queryCityFallback(c.env, lat, lon, "25km");
+        if (fallbackCity) {
+          features.push(fallbackCity);
+          cityFeature = fallbackCity;
+        }
+      } catch (err) {
+        // Log but continue without city
+        console.warn(`City fallback query failed:`, err);
+      }
+    }
+
+    // Fallback 2: if city found but no country, use city's country_code to look up country
     const countryFeature = features.find((f) => f.level === "country");
 
     if (cityFeature && !countryFeature && cityFeature.country_code) {

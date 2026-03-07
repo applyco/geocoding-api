@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx wrangler deploy --env production)",
+      "Bash(ES_URL=\"http://elasticsearch-vgo88gk400s4osw4csso8koc.46.183.118.221.sslip.io\" ES_USERNAME=\"elastic\" ES_PASSWORD=\"U3TGKEHPJrzOyjT8lFa3iN69r9WbvB9y\" npm run etl)",
+      "Bash(xargs grep -l \"index template\\\\|index mapping\\\\|geo_cities\")",
+      "Bash(npm run ts -- etl/src/steps/02_add_missing_cities.ts)",
+      "Bash(npm run ts -- src/steps/02_add_missing_cities.ts)",
+      "Bash(npm run)",
+      "Bash(ES_URL=\"$ES_URL\" ES_USERNAME=\"$ES_USERNAME\" ES_PASSWORD=\"$ES_PASSWORD\" npx tsx src/steps/02_add_missing_cities.ts)",
+      "Bash(ES_URL=\"http://elasticsearch-vgo88gk400s4osw4csso8koc.46.183.118.221.sslip.io\" ES_USERNAME=\"elastic\" ES_PASSWORD=\"U3TGKEHPJrzOyjT8lFa3iN69r9WbvB9y\" npx tsx src/steps/02_add_missing_cities.ts)",
+      "Bash(curl -s \"https://geocoding-api-production.tortugo-raw.workers.dev/reverse?lat=37.894384&lon=-4.379845&lang=es\")",
+      "Bash(curl -s \"https://geocoding-api-production.tortugo-raw.workers.dev/reverse?lat=38.060664158478254&lon=-0.866836045181599&lang=es\")"
+    ]
+  }
+}

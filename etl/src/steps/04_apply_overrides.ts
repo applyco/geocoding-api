@@ -37,34 +37,65 @@ function stripCommonSuffixes(name: string, lang: "en" | "es" | "pt"): string {
 }
 
 /**
- * Apply a set of overrides to features
+ * Apply overrides to countries using ISO_A3 code
  */
-function applyOverridesToFeature(
-  feature: any,
-  overrides: Record<string, NameOverride> | undefined
-): void {
-  if (!overrides) return;
+function applyCountryOverrides(geojson: any, overrides: Record<string, NameOverride>): number {
+  let applied = 0;
 
-  const featureId = feature.properties?.feature_id || feature.id;
-  const override = overrides[featureId];
+  for (const feature of geojson.features) {
+    const isoA3 = feature.properties?.ISO_A3;
+    if (!isoA3 || !overrides[isoA3]) continue;
 
-  if (!override) return;
+    const override = overrides[isoA3];
+    if (!feature.properties.names) {
+      feature.properties.names = {};
+    }
 
-  // Update names
-  if (!feature.properties.names) {
-    feature.properties.names = {};
+    if (override.names) {
+      feature.properties.names.es = override.names.es || feature.properties.names.es || "";
+      feature.properties.names.en = override.names.en || feature.properties.names.en || "";
+      feature.properties.names.pt = override.names.pt || feature.properties.names.pt || "";
+    }
+
+    if (override.canonical) {
+      feature.properties.canonical = override.canonical;
+    }
+
+    applied++;
   }
 
-  if (override.names) {
-    feature.properties.names.es = override.names.es || feature.properties.names.es;
-    feature.properties.names.en = override.names.en || feature.properties.names.en;
-    feature.properties.names.pt = override.names.pt || feature.properties.names.pt;
+  return applied;
+}
+
+/**
+ * Apply overrides to cities using geonameid
+ */
+function applyCityOverrides(geojson: any, overrides: Record<string, NameOverride>): number {
+  let applied = 0;
+
+  for (const feature of geojson.features) {
+    const geonameid = feature.properties?.geonameid?.toString();
+    if (!geonameid || !overrides[geonameid]) continue;
+
+    const override = overrides[geonameid];
+    if (!feature.properties.names) {
+      feature.properties.names = {};
+    }
+
+    if (override.names) {
+      feature.properties.names.es = override.names.es || feature.properties.names.es || "";
+      feature.properties.names.en = override.names.en || feature.properties.names.en || "";
+      feature.properties.names.pt = override.names.pt || feature.properties.names.pt || "";
+    }
+
+    if (override.canonical) {
+      feature.properties.canonical = override.canonical;
+    }
+
+    applied++;
   }
 
-  // Update canonical if provided
-  if (override.canonical) {
-    feature.properties.canonical = override.canonical;
-  }
+  return applied;
 }
 
 async function main() {
@@ -83,53 +114,47 @@ async function main() {
     >;
     console.log("  ✓ Loaded overrides.yaml");
 
-    // Process each GeoJSON file
-    const files = ["countries", "admin1", "zones", "cities"];
     let totalApplied = 0;
 
-    for (const fileBase of files) {
-      const filePath = path.join(PROCESSED_DATA_DIR, `${fileBase}.geojson`);
-      if (!fs.existsSync(filePath)) {
-        console.log(`  ⊘ ${fileBase}.geojson not found, skipping`);
-        continue;
-      }
+    // Process countries
+    const countriesPath = path.join(PROCESSED_DATA_DIR, "countries.geojson");
+    if (fs.existsSync(countriesPath)) {
+      const geojson = JSON.parse(fs.readFileSync(countriesPath, "utf-8"));
+      const countryOverrides = overridesRaw.countries || {};
 
-      const geojson = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-      const overrides = overridesRaw[fileBase];
-
-      if (!overrides || Object.keys(overrides).length === 0) {
-        console.log(`  ${fileBase}.geojson: no overrides defined`);
-        continue;
-      }
-
-      let applied = 0;
-      for (const feature of geojson.features) {
-        const before = feature.properties.canonical;
-        applyOverridesToFeature(feature, overrides);
-        const after = feature.properties.canonical;
-
-        if (before !== after) {
-          applied++;
-        }
-      }
-
+      const applied = applyCountryOverrides(geojson, countryOverrides);
       if (applied > 0) {
-        fs.writeFileSync(filePath, JSON.stringify(geojson, null, 2));
-        console.log(`  ✓ ${fileBase}.geojson: applied ${applied} overrides`);
+        fs.writeFileSync(countriesPath, JSON.stringify(geojson, null, 2));
+        console.log(`  ✓ countries.geojson: applied ${applied} overrides`);
         totalApplied += applied;
       }
     }
 
-    // Also demonstrate name normalization
-    console.log(`\n  Total overrides applied: ${totalApplied}`);
-    console.log("\n  Name normalization rules (before override):");
-    for (const [lang, suffixes] of Object.entries(SUFFIX_STRIP_PATTERNS)) {
-      console.log(`    ${lang}: strip ${suffixes.join(", ")}`);
+    // Process cities
+    const citiesPath = path.join(PROCESSED_DATA_DIR, "cities.geojson");
+    if (fs.existsSync(citiesPath)) {
+      const geojson = JSON.parse(fs.readFileSync(citiesPath, "utf-8"));
+      const cityOverrides = overridesRaw.cities || {};
+
+      const applied = applyCityOverrides(geojson, cityOverrides);
+      if (applied > 0) {
+        fs.writeFileSync(citiesPath, JSON.stringify(geojson, null, 2));
+        console.log(`  ✓ cities.geojson: applied ${applied} overrides`);
+        totalApplied += applied;
+      }
     }
 
-    console.log("\n✓ Step 04 complete");
+    // Display name normalization rules
+    console.log(`\n  Total overrides applied: ${totalApplied}`);
+
+    console.log("\n  Name normalization rules (before override):");
+    console.log("    en: strip  Region,  Province,  Prefecture,  Oblast,  Territory,  State");
+    console.log("    es: strip  Región,  Provincia,  Territorio,  Estado");
+    console.log("    pt: strip  Região,  Província,  Território,  Estado");
+
+    console.log("\n✓ Step 04 complete\n");
   } catch (err) {
-    console.error("✗ Step 04 failed:", err);
+    console.error("  ✗ Error:", err);
     process.exit(1);
   }
 }

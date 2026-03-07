@@ -118,13 +118,14 @@ export async function loadCitiesFromFile(
     const city = parseCitiesLine(line.trim());
     if (!city) continue;
 
-    // Default filter: populated places with population >= 5000
+    // Default filter: populated places with population >= 1000
+    // Includes: PPL (populated place), PPLA* (capitals of admin divisions), PPLC (capital)
     if (filterFn) {
       if (filterFn(city)) cities.push(city);
     } else if (
       ["P"].includes(city.featureClass) &&
-      ["PPL", "PPLA", "PPLA2", "PPLC"].includes(city.featureCode) &&
-      city.population >= 5000
+      ["PPL", "PPLA", "PPLA2", "PPLA3", "PPLA4", "PPLA5", "PPLC"].includes(city.featureCode) &&
+      city.population >= 1000
     ) {
       cities.push(city);
     }
