@@ -5,8 +5,8 @@ dist/
 .env.*.local
 
 # ETL data
-etl/data/raw/
-etl/data/processed/
+etl/data/
+etl/src/data/
 etl/.wrangler/
 
 # Build outputs
